@@ -1,0 +1,41 @@
+# 用户指定的需要排除的资源文件夹
+Assets/resource/Free_Pack/
+Assets/resource/Hana Caraka - Base Character [sample]/
+Assets/resource/Input Sprites for TextMesh Pro/
+Assets/resource/karsiori/
+Assets/resource/Mini_Pixel_2D_Weapons/
+
+# Unity 临时文件和缓存
+Temp/
+Obj/
+Library/
+Logs/
+MemoryCaptures/
+
+# Unity 构建输出
+Build/
+Builds/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio 缓存
+.vs/
+*.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE 配置文件（可选保留）
+# .vscode/
+
+# 其他常见忽略项
+*.swp
+*.swo
+*~
