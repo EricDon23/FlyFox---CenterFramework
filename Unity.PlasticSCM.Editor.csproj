@@ -1,0 +1,1441 @@
+﻿<Project ToolsVersion="Current">
+  <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>Temp\obj\$(Configuration)\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Include="Unity" />
+  </ItemGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>9.0</LangVersion>
+    <Configurations>Debug;Release</Configurations>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <RootNamespace></RootNamespace>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Unity.PlasticSCM.Editor</AssemblyName>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>UNITY_2022_3_62;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;UNITY_UGP_API;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;PLATFORM_INITIALIZES_MEMORY_MANAGER_EXPLICITLY;ENABLE_MONO;NET_4_6;NET_UNITY_4_8;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_EDITOR_ONLY_COMPILATION</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoStandardLibraries>true</NoStandardLibraries>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
+    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2022.3.62f2c1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Users\dgh\.vscode\extensions\visualstudiotoolsforunity.vstuc-1.2.2\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="E:\game\2022.3.62f2c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
+    <Analyzer Include="E:\game\2022.3.62f2c1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSMenuItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\UpdateProgress.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\ItemsPosition.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\BranchesViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\AddMoveMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\PlasticTreeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Errors\ErrorsListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\WebApi\ErrorResponse.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\WebApi\SubscriptionDetailsResponse.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DropDownTextField.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\Tree\CloudWorkspacesTreeViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\RunModal.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\MoveDeleteMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\PlasticExeLauncher.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\ItemsGridSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\DrawDirectoryResolutionPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\GetClientDiffInfos.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\DiffTreeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Locks\LocksViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UnityThreadWaiter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Settings\PendingChangesOptionsFoldout.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\PlasticDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesViewPendingChangeMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CreateWorkspace\CreateWorkspaceDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\MetaPath.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\WriteLogConfiguration.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\UnityDiffTree.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\LaunchDiffOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Gluon\IncomingChangesSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UndoRedo\UndoRedoState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\Operations\UncontrolledPopupOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\ScreenResolution.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\WebApi\CurrentUserAdminCheckResponse.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSPluginIsEnabledPreference.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UndoRedo\UndoRedoTextArea.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\GUIActionRunner.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\ToolConfig.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\ShelvePendingChangesDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CreateWorkspace\CollaboratorsListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\LabelsSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\ChangelistTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\CloudEdition\Welcome\SignInWithEmailPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\SwitchUVCSPlugin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\DrawProgressForOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\CloseWindowIfOpened.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawSearchField.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\ProjectViewUVCSAssetMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\MergeViewFileConflictMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\LaunchPackageManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\Cache\RemoteStatusCache.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\DrawProgressForDialogs.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\IsResolved.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Welcome\MacOSConfigWorkaround.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\VisualElementExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\CenteredContentPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\GetPlasticShortcut.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawUserIcon.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\GuiEnabled.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\MergeViewDirectoryConflictMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CheckWorkspaceTreeNodeStatus.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CreateWorkspace\CollaboratorsListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Shelves\ShelvesViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\CloudEdition\Welcome\CloudEditionWelcomeWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\GetChangesOverlayIcon.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Hub\CommandLineArguments.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Hub\Operations\DownloadRepository.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\BuildGetEventExtraInfoFunction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\PlasticApp.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\CredentialsUIImpl.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\WebApi\WebRestApiClient.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CreateWorkspace\CollaboratorsMultiColumnHeader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\LabelsListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Dialogs\CheckinConflictsDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesTab_Operations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSConnectionMonitor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Avatar\AvatarImages.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\PerformInitialCheckin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CloudDriveMenuItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\RecommendToEnableManualCheckout.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Dialogs\FilterRulesConfirmationDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\ParentWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\EditorWindowFocus.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessWorkspaceWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\Tree\CloudWorkspacesTreeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\ImportInProjectDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\ApplyShelveReport.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\History\HistoryTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DelayedActionByFramesRunner.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\Dialogs\RenameBranchDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\Processor\UnityCloudProjectLinkMonitor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\DeleteMoveMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Settings\OpenUVCSProjectSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\MeasureMaxWidth.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\_Deprecated\UI\CooldownWindowDelayer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UnityPlasticDllVersion.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\History\HistoryListViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\EnumPopupSetting.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\ClientConfiguration.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\LabelsViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\PopupWindowDrawing.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\ProjectLoadedCounter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\CheckUnityException.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Hub\Operations\OperationParams.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\MergeTreeHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\BrowseRepository\BrowseRepositoryHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\UpdateReport\UpdateReportDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\History\SaveAction.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Gluon\ChangeCategoryTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\TestingPreference.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\HierarchyExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Errors\ErrorsDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\AssetFilesFilterPatternsMenuBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\Dialogs\CheckinDialogOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\CreatedChangesetData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawCopyableLabel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\BranchesList\ErrorEmptyState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\Dialogs\RenameLabelDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\DrawAssetOverlayIcon.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\DirectoryContentPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\_Deprecated\WebApi\IsCollabProjectMigratedResponse.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\DrawGuiModeSwitcher.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\ProgressOperationHandler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\CloudWorkspacesView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\_Deprecated\CollabPlugin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\DrawCreateWorkspaceView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Shelves\ShelvesListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\ProcessItemsGridViewEvent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\FindTool.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\CloudEdition\Welcome\OrganizationPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Dialogs\LaunchCheckinConflictsDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Locks\LocksListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\DeleteChangeMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\IncomingChangesNotification.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\BrowseRepository\BrowseRepositoryTreeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Avatar\GetAvatar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\ConflictResolutionState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\QueryVisualElementsExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UnityConfigurationChecker.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\BringWindowToFront.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\MergeSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\MovedEvilTwinMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\Processor\AssetsProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\GenericProgress.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DockEditorWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\Dialogs\LabelChangesetDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\ShelvedChangesNotification.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\Processor\UVCSAssetsProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\MoveAddMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\Cache\BuildPathDictionary.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\BranchListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\DirectoryContentPanelMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\RepaintEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\EditorVersion.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbarButtonIsShownPreference.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\UnityMergeTree.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\IntSetting.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\UncontrolledPopupWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\CheckinProgress.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\BranchesList\LoadingEmptyState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\AssetMenuOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\AuthToken.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UnityMenuItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\BranchesListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\NewNameDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\Processor\UVCSAssetPostprocessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\DrawExpandedTreeNode.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Gluon\ChangeTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\StatusBar\WindowStatusBar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\_Deprecated\WebApi\ChangesetFromCollabCommitResponse.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\SSOCredentialsDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\GetRelativePath.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\Processor\UVCSAssetModificationProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessProgressControls.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\IIncomingChangesTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\BranchesList\BranchesListModel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Inspector\InspectorAssetSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\UpdateReport\UpdateReportLineListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\DrawProgressForViews.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\DrawProjectOverlay.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Errors\ErrorListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Shelves\ShelveListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesStatusSuccessNotificationContent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\EncryptionConfigurationDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\History\HistoryListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\Dialogs\CheckinDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UIElements\ProgressControlsForDialogs.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\EnumExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Changelists\MoveToChangelistMenuBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Dialogs\LaunchDependenciesDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesMultiColumnHeader.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesTreeHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\ToolbarMouseBoundary.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\LabelListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\BranchesList\NoBranchesEmptyState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Errors\ErrorsPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\EvilTwinMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\IncomingChangesNotification.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\ChangeCategoryTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\Tree\CloudWorkspacesTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\StatusBar\INotificationContent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\CloudEdition\Welcome\WaitingSignInPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\Cache\AssetStatusCache.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\_Deprecated\CollabMigration\MigrateCollabProject.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\ChangesetsListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\DiffSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\Dialogs\RepositoriesListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CreateWorkspace\CreateWorkspaceView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\UpdateReport\ErrorListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\Dialogs\RepositoryExplorerDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Gluon\IncomingChangesTreeHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\History\HistoryListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DialogWithCheckBox.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\MergeCategoryTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\HandleMenuItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\BrowseRepository\BrowseRepositoryPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\History\SerializableHistoryTabState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\ChangeTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\AutoConfig.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Inspector\DrawInspectorOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\ProjectViewAssetSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\MergeTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\ProgressControlsForViews.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\CreatedChangesetEmptyStatePanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessWorkspaceStatusChangeListener.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\ProgressControlsForWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\CycleMoveMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UnityConstants.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Settings\OtherOptionsFoldout.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\AssetsPath.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\ShareWorkspace\ShareWorkspacePanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\BranchesList\PopupProgressBar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\ChannelCertificateUiImpl.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Images.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\DrawOperationSuccess.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\TabButton.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\ProgressOperationHandler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\OrganizationsInformation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\AssetCopyPathOperation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\BrowseRepository\BrowseRepositoryViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\TreeHeaderColumns.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\AssetOverlay.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\TableViewOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\History\HistorySelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\_Deprecated\WebApi\OrganizationCredentials.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawTextBlockWithLink.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Gluon\IncomingChangesTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\ProjectPath.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CloudDrivePlugin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\SaveAssets.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawActionToolbar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\ChangeCategoryTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\Dialogs\GetRestorePathDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\MergeViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Dialogs\CreateChangelistDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\GetProposedOrganizationProject.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\ConfirmContinueWithPendingChangesDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessMergeViewLauncher.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Hub\Operations\CreateWorkspace.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\DrawCommentTextArea.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Gluon\IncomingChangesViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\EditorProgressBar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\SerializableMergeTabState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingMergeLinks\MergeLinkListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingChangesTreeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\CloudEdition\Welcome\AutoLogin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\UVCSToolbar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Hub\ProcessHubCommand.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\Dialogs\AddToCloudDriveDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\FindWorkspace.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DelayedActionBySecondsRunner.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\DeleteWorkspaceDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\SortOrderComparer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Locks\LocksListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\IsCurrent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\ResponseType.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\CloudEdition\Welcome\SignInPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\ToolbarController.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\AssetsSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\ClientDiffTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CloudDriveWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\AssetStatus.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\Dialogs\DeleteBranchDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\Tree\CloudWorkspacesSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\ChangesetsTab_Operations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessUpdateProgress.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\DrawMergeOverview.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Settings\ShelveAndSwitchOptionsFoldout.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Settings\UVCSProjectSettingsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\ChangesetsListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\EditorProgressControls.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\GetSelectedPaths.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Shelves\ShelvesTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\BranchesList\BranchesTreeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\Dialogs\RepositoryListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\SerializableBranchesTabState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\TreeViewSessionState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\ViewSwitcher.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Gluon\IncomingChangesTreeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\LoadingSpinner.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\CredentialsDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Shelves\ShelvesSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\TeamEdition\TeamEditionConfigurationWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\IsExeAvailable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\LabelsTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\LoadAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\PlasticSplitterGUILayout.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\FindEditorWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\ControlledPopupWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\ChangesetsViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\ChangesetsTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\EnableSwitchAndShelveFeatureDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\SwitchModeConfirmationDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Avatar\ApplyCircleMask.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\ConfigurePartialWorkspace.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Hub\ParseArguments.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\DownloadPlasticExeDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\DrawTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\Dialogs\CreateBranchDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UnityPlasticGuiMessage.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Locks\DrawLocksListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\RefreshAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawSplitter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\UVCSToolbarButtonData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\WorkspaceWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\Cache\LockStatusCache.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\StatusBar\NotificationBar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Welcome\WelcomeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\RefreshAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\ChangesetsSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSPlugin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\WindowStatusBar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\LabelsListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\UpdateReport\UpdateReportListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Shelves\ShelvesListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\TreeViewItemIds.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Changelists\ChangelistMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\TreeViewItemExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\LaunchInstaller.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\ShowWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\UnityPendingChangesTree.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\EditorDispatcher.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawActionHelpBox.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessGluonUpdateReport.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\VCSBuiltInPlugin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessUpdateReport.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\ChangeDeleteMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\GetOverlayRect.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\DrawProgressForWindow.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawActionButton.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\DrawItemNameBar.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\UpdateProgress.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\ProjectPackages.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\EmptyStatePanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\OperationProgressData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\BoolSetting.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\PackageInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\_Deprecated\PlasticPlugin.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\_Deprecated\Settings\PlasticProjectSettingsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\ChangeTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CreateWorkspace\CreateWorkspacePanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\StatusBar\GUIContentNotification.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\BranchesTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UIElements\LoadingSpinner.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\HierarchyViewAssetMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Errors\ErrorsListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\ApplyShelveWithConflictsQuestionerBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\ShareWorkspace\ShareWorkspaceDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\UpdateReport\UpdateReportDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\BranchesTab_Operations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\UpdateReport\UpdateReportListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DragAndDrop\AskUserForExistingFile.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSNotification.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\DrawHierarchyOverlay.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\Dialogs\CreateLabelDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Locks\LocksSelector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\PackageEntryPoint.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetOverlays\Cache\LocalStatusCache.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\FindUnityObject.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\WebApi\CredentialsResponse.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UnityStyles.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\IncomingChanges.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Gluon\ShelvedChangesNotification.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\AssetUVCSOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\ToolConstants.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\FilesFilterPatternsMenuBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\LoadedTwiceMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\DiffTreeViewMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\CreateWorkspaceView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Welcome\DownloadAndInstallOperation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AutoRefresh.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Locks\LocksListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\ProcessDragEvent.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessGluonViewHost.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessViewSwitcher.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\CreateWorkspaceViewState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\UpdateReport\UpdateReportListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\WebApi\TokenExchangeResponse.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UnityEvents.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UnityPlasticTimer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Welcome\GetInstallerTmpFileName.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\HierarchyViewAssetSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\ItemsGridView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Settings\DiffAndMergeOptionsFoldout.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\ChangesetExplorerView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawActionButtonWithMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetMenu\ProjectViewCloudDriveAssetMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\Operations\ControlledPopupOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\ValidRepositoryName.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\GetWindowIfOpened.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\SelectNewCodeReviewBehavior.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\LaunchTool.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\ChangeCategoryTreeViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Locks\LocksTab.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\Headless\HeadlessGluonUpdateProgress.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\BranchesSelection.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UIElements\UIElementsExtensions.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\SceneView\DrawSceneOperations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\ApplicationDataPath.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Progress\ProgressControlsForDialogs.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\AssetsUtils\Processor\WorkspaceOperationsMonitor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\TreeHeaderSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\GetChangesetsQuery.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UVCSToolbar\PopupWindow\Operations\ToolbarOperationsShortcut.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Dialogs\DependenciesDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Workspaces\DirectoryContent\DrawItemsGridView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\Welcome\WelcomeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\Dialogs\EmptyCommentDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Branch\BranchesListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Configuration\MissingEncryptionPasswordPromptHandler.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\LabelsTab_Operations.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\Tree\ListViewItemIds.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\ExternalLink.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\History\HistoryListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\UpdateReport\UpdateReportListHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Tool\IsExeVersion.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\Dialogs\CreateRepositoryDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\UndoRedo\UndoRedoHelper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\MergeTreeView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\DirectoryConflicts\DivergentMoveMenu.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Diff\DiffPanel.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\FileSystemOperation.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\CreateWorkspace\Dialogs\RepositoriesListView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\CloudDrive\CreateWorkspace\CollaboratorsListViewHeaderState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\EntryBuilder.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Labels\Dialogs\CreateLabelView.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Developer\CheckinProgress.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\UI\DrawStaticElement.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Changesets\ChangesetListViewItem.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\DateFilter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Gluon\UnityIncomingChangesTree.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\Merge\Developer\MergeOptionsDialog.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Views\PendingChanges\PendingMergeLinks\MergeLinksListView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\DownloadPlasticExeDialog.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\WaitingSignInPanel.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Layouts\TabView.uxml" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\ProgressControlsForDialogs.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Layouts\WaitingSignInPanel.uxml" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Layouts\SignInWithEmailPanel.uxml" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\SignInWithEmailPanel.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\OrganizationPanel.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Layouts\TeamEditionConfigurationWindow.uxml" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Layouts\OrganizationPanel.uxml" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\SignInPanel.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Layouts\SignInPanel.uxml" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\TabView.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Unity.PlasticSCM.Editor.asmdef" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\TeamEditionConfigurationWindow.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Layouts\DownloadPlasticExeDialog.uxml" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Styles\Base.uss" />
+    <None Include="Library\PackageCache\com.unity.collab-proxy@2.10.2\Editor\Assets\Layouts\ProgressControlsForDialogs.uxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ARModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterInputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ClusterRendererModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ContentLoadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.GIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.NVIDIAModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.PropertiesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityCurlModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.VirtualTexturingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DeviceSimulatorModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.DeviceSimulatorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DiagnosticsModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.DiagnosticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.EditorToolbarModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.EditorToolbarModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.GraphViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PresetsUIModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.PresetsUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.QuickSearchModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.QuickSearchModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneTemplateModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneViewModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.SceneViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreFontEngineModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreTextEngineModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIBuilderModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIBuilderModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.UIElementsSamplesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\PlaybackEngines\WebGLSupport\UnityEditor.WebGL.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\PlaybackEngines\AndroidPlayer\UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="unityplastic">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.10.2\Lib\Editor\unityplastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Plastic.Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.collab-proxy@2.10.2\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.GradleProject">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Runtime.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Microsoft.CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Data.DataSetExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Drawing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.IO.Compression.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.ComponentModel.Composition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\System.Transactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.AppContext.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.Concurrent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.NonGeneric.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Collections.Specialized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.Annotations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Console.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Data.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Debug.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Process.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Diagnostics.TraceSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Drawing.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Dynamic.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.Calendars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Globalization.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.FileSystem.Watcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.IsolatedStorage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.MemoryMappedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.Pipes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Linq.Queryable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Rtc">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Http.Rtc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.NameResolution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.NetworkInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Ping.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Requests.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebHeaderCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebSockets.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Net.WebSockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.DispatchProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Reflection.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.Reader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Resources.Writer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Handles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Runtime.Serialization.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Claims.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Csp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.Principal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Security.SecureString.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Duplex">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Duplex.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.NetTcp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ServiceModel.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.Encoding.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Text.RegularExpressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Overlapped.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Tasks.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Thread.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.ThreadPool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Threading.Timer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.ReaderWriter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XmlDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XmlSerializer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>E:\game\2022.3.62f2c1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UnityEditor.UI.csproj" />
+    <ProjectReference Include="UnityEngine.UI.csproj" />
+    <ProjectReference Include="UnityEditor.TestRunner.csproj" />
+    <ProjectReference Include="UnityEngine.TestRunner.csproj" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Remove="LaunchProfiles" />
+    <ProjectCapability Remove="SharedProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
+    <ProjectCapability Remove="ProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerProjects" />
+    <ProjectCapability Remove="COMReferences" />
+    <ProjectCapability Remove="ReferenceManagerCOM" />
+    <ProjectCapability Remove="AssemblyReferences" />
+    <ProjectCapability Remove="ReferenceManagerAssemblies" />
+  </ItemGroup>
+</Project>

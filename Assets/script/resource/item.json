@@ -1,0 +1,20 @@
+[
+    {
+        "baseScore": 0,
+        "type": "Empty"
+
+    },
+    {
+        "baseScore": 5,
+        "type": "berry",
+        "heal": 1
+    },
+    {
+        "baseScore": 10,
+        "type": "coin"
+    },
+    {
+        "baseScore": 15,
+        "type": "gem"
+    }
+]
