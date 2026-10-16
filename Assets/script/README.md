@@ -1,4 +1,4 @@
-# Assetest 脚本框架说明
+# Center 脚本框架说明
 
 统一架构：**Center（框架基础，冻结） + Action（行为/逻辑） + Data（纯数据） + Enum + resource**。
 框架内部的全局状态（Global / GameStateMachine / ScoreCalculator）位于 `Center/global/`，引导入口 `GlobalConter` 位于 `Center/Bootstrap/`。
