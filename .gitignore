@@ -4,6 +4,11 @@ Assets/resource/Hana Caraka - Base Character [sample]/
 Assets/resource/Input Sprites for TextMesh Pro/
 Assets/resource/karsiori/
 Assets/resource/Mini_Pixel_2D_Weapons/
+Assets/Resources/Free_Pack/
+Assets/Resources/Hana Caraka - Base Character [sample]/
+Assets/Resources/Input Sprites for TextMesh Pro/
+Assets/Resources/karsiori/
+Assets/Resources/Mini_Pixel_2D_Weapons/
 
 # Unity 临时文件和缓存
 Temp/
@@ -11,6 +16,8 @@ Obj/
 Library/
 Logs/
 MemoryCaptures/
+UIElementsSchema/
+UserSettings/
 
 # Unity 构建输出
 Build/
@@ -19,23 +26,33 @@ Builds/
 [Dd]ebug/
 [Rr]elease/
 
-# Visual Studio 缓存
+# Visual Studio 生成文件
 .vs/
 *.vs/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
+*.csproj
+*.csproj.user
+*.sln
+*.slnx
+*.asmdef.user
+*.pidb
+*.mdb
+*.opendb
+*.VC.db
+*.VC.opendb
 
-# 操作系统文件
+# OS 文件
 .DS_Store
 Thumbs.db
 Desktop.ini
 
-# IDE 配置文件（可选保留）
-# .vscode/
+# IDE
+.vscode/
 
-# 其他常见忽略项
+# 其他
 *.swp
 *.swo
 *~

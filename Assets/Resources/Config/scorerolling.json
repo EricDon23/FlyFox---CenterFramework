@@ -1,0 +1,9 @@
+[
+    {
+        "index": 0,
+        "name": "ScoreRolling",
+        "scrollSpeed": 8.0,
+        "spawnTriggerX": 0.0,
+        "destroyX": -10.0
+    }
+]

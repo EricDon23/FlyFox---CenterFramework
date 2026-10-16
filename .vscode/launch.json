@@ -2,9 +2,28 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Attach Unity Editor",
+            "type": "coreclr",
+            "request": "attach",
+            "processName": "Unity"
+        },
+        {
+            "name": "EmmyLua Attach Unity XLua",
+            "type": "emmylua",
+            "request": "attach",
+            "host": "127.0.0.1",
+            "port": 9966,
+            "sourceMaps": [
+                {
+                    "localRoot": "${workspaceFolder}/Assets/Lua",
+                    "remoteRoot": "Assets/Lua"
+                }
+            ]
+        },
+        {
             "name": "Attach to Unity",
             "type": "vstuc",
             "request": "attach"
         }
-     ]
+    ]
 }
