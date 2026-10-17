@@ -42,8 +42,6 @@ public class PlayerBehavior : Objectbehavior
     private void OnFixedUpdate()
     {
         if (g_obj == null) return;
-        // 【改造】新框架引入 GameStateMachine，Menu/GameOver 状态冻结玩家输入；
-        // 遵循框架规则：行为帧更新由 SingleMono 泵驱动，状态切换由 GameStateMachine 统一管理。
         if (Global.CurrentState != GameEnum.Playing) return;
 
         _action.Tick(Time.fixedDeltaTime);
@@ -70,5 +68,17 @@ public class PlayerBehavior : Objectbehavior
         }
 
         _action.TryStartDash(_collider);
+    }
+
+    /// <summary>外部读取：当前已用 Dash 次数。</summary>
+    public int RemainingDashUsed => _action != null ? _player.MaxDashCount - _action.RemainingDash : 0;
+
+    /// <summary>外部调用：玩家受伤，HP-1，广播最新血量。</summary>
+    public void TakeDamage(int dmg)
+    {
+        if (_player == null) return;
+        _player.ApplyDamage(dmg);
+        Debug.Log($"[PlayerBehavior] 受到伤害 -{dmg}，HP={_player.Health}/{_player.MaxHealth}");
+        EventCenter.Instance.Broadcast<object>("PlayerDamaged", _player.Health);
     }
 }

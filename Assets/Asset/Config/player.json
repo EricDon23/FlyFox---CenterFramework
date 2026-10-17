@@ -1,0 +1,16 @@
+[
+    {
+        "index": 0,
+        "name": "Player",
+        "currentHealth": 1,
+        "maxHealth": 3,
+        "moveSpeed": 8.0,
+        "dashSpeed": 10.0,
+        "dashCooldownDuration": 2.0,
+        "dashCooldownTimer": 0.0,
+        "maxDashCount": 3,
+        "usedDashCount": 0,
+        "dashInterval": 0.1,
+        "dashRecoverTime": 1.0
+    }
+]

@@ -12,7 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61de996a76c834a4d95c279906d1afd5, type: 3}
   m_Name: PathSetting
   m_EditorClassIdentifier: 
-  ResourcesPath: []
+  ResourcesPath:
+  - 
+  - Entity/Player
+  - Entity/Enemy/Normal
+  - Entity/Enemy/Boss
+  - Entity
+  - UI
+  - Scene
+  - Item
+  - Config
   AssetBundles: []
   Addressable: []
   UnityWebRequst: []

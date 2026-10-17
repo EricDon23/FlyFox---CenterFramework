@@ -10,7 +10,7 @@ public static class Global
     private static int _sessionBaseScore;
     private static float _sessionTimeBonus;
     private static int _finalSessionScore;
-    private static GameEnum _currentState = GameEnum.Menu;
+    private static GameEnum _currentState = GameEnum.start;
 
     // 保留所有原属性的读写权限（完全兼容原有调用）
     public static float StartTime

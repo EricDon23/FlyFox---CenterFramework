@@ -1,0 +1,10 @@
+[
+    {
+        "index": 0,
+        "name": "LevelBuild",
+        "cellSize": { "x": 1.0, "y": 1.0 },
+        "originOffset": { "x": 0.0, "y": 0.0 },
+        "gridWidth": 12,
+        "gridHeight": 5
+    }
+]

@@ -77,23 +77,26 @@ public class UIManagerBehavior : UIBehavior
     private void OnBegin()
     {
         Debug.Log("[UIManager] 点击开始游戏");
-        EventCenter.Instance.Broadcast("RequestGameStart");
+        UICenter.Instance.OpenUI("GamingUI"); // 先打开 UI，确保订阅事件
+        EventCenter.Instance.Broadcast("RequestGameStart"); // 再触发状态切换
         g_obj.SetActive(false);
     }
 
     private void OnOver()
     {
-        Debug.Log("[UIManager] 点击结束游戏");
-        EventCenter.Instance.Broadcast("RequestGameOver");
-        g_obj.SetActive(false);
+        Debug.Log("[UIManager] 点击结束游戏，退出程序");
+        GlobalConter.Instance.DestroyAllBehaviours();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 
     private void OnRecord()
     {
-        Debug.Log("[UIManager] 点击恢复/重置");
-        Global.SessionBaseScore = 0;
-        Global.FinalSessionScore = 0;
-        EventCenter.Instance.Broadcast("RequestGameOver");
-        g_obj.SetActive(true);
+        Debug.Log("[UIManager] 打开成绩记录页面");
+        UICenter.Instance.OpenUI("Record");
+        g_obj.SetActive(false);
     }
 }

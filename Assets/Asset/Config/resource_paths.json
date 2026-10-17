@@ -1,0 +1,10 @@
+{
+    "searchPaths": [
+        "",
+        "Prefabs",
+        "Entities",
+        "Gameplay",
+        "UI",
+        "Config"
+    ]
+}

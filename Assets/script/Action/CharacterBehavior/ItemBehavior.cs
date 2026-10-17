@@ -28,6 +28,7 @@ public class ItemBehavior : Objectbehavior
             player.Heal(_fruit.Heal);
             shouldScore = false;
             Debug.Log($"[ItemBehavior] 治疗 +{_fruit.Heal}，HP={player.Health}/{player.MaxHealth}");
+            EventCenter.Instance.Broadcast<object>("PlayerHealed", player.Health);
         }
 
         if (shouldScore)

@@ -1,0 +1,9 @@
+[
+    {
+        "index": 0,
+        "name": "Background",
+        "baseScrollSpeed": 6.0,
+        "spawnBorderX": 0.0,
+        "destroyBorderX": -64.3
+    }
+]

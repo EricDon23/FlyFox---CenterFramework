@@ -36,14 +36,20 @@ public class PlayerAction
         if (_dashRecoverTimer > 0f)
         {
             _dashRecoverTimer -= deltaTime;
-        }
-        else
-        {
-            _usedDashCount--;
-            if (_usedDashCount > 0) _dashRecoverTimer = _player.DashRecoverTime;
-            else _dashRecoverTimer = 0f;
+            if (_dashRecoverTimer <= 0f)
+            {
+                // Dash 恢复一次，广播最新剩余次数
+                _usedDashCount--;
+                int remaining = _player.MaxDashCount - _usedDashCount;
+                EventCenter.Instance.Broadcast<object>("DashRestored", remaining);
+                if (_usedDashCount > 0) _dashRecoverTimer = _player.DashRecoverTime;
+                else _dashRecoverTimer = 0f;
+            }
         }
     }
+
+    /// <summary>当前剩余 Dash 次数。</summary>
+    public int RemainingDash => _player.MaxDashCount - _usedDashCount;
 
     public void Move()
     {
@@ -93,5 +99,7 @@ public class PlayerAction
         _dashRecoverTimer = _player.DashRecoverTime;
         dashTarget = target;
         isDashing = true;
+        int remaining = _player.MaxDashCount - _usedDashCount;
+        EventCenter.Instance.Broadcast<object>("PlayerDashUsed", remaining);
     }
 }
