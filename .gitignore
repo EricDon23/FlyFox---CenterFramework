@@ -20,9 +20,9 @@ UIElementsSchema/
 UserSettings/
 
 # Unity 构建输出
-Build/
-Builds/
-[Bb]uild/
+# Build/
+# Builds/
+# [Bb]uild/
 [Dd]ebug/
 [Rr]elease/
 

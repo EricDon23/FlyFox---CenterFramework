@@ -44,11 +44,11 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
-  m_TransitionOffset: 0.9
-  m_ExitTime: 0.009999976
-  m_HasExitTime: 1
-  m_HasFixedDuration: 1
+  m_TransitionDuration: 0.6837982
+  m_TransitionOffset: 0.019100096
+  m_ExitTime: 0.19100069
+  m_HasExitTime: 0
+  m_HasFixedDuration: 0
   m_InterruptionSource: 2
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
@@ -110,7 +110,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hurt_Animation
-  m_Speed: 0.1
+  m_Speed: 0.5
   m_CycleOffset: 1
   m_Transitions:
   - {fileID: 282433040837978081}
@@ -140,7 +140,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4380992384173369365}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 240, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1038608075698235179}
     m_Position: {x: 527.1821, y: 39.716675, z: 0}

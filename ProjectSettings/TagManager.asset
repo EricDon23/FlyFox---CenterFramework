@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
   - fruit
   - score
+  - Enemy
   layers:
   - Default
   - TransparentFX

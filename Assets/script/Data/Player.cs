@@ -10,7 +10,7 @@ using UnityEngine;
 public class Player : BasicDate
 {
    [SerializeField]
-   private int currentHealth = 1;//生命
+   private int currentHealth = 3;//生命
    [SerializeField]
    private int maxHealth = 3;//最大生命
    [SerializeField]

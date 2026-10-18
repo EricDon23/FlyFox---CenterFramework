@@ -180,7 +180,7 @@ public class LevelBuildBehavior : Objectbehavior
             var item = _activeItems[i];
             if (item == null) { _activeItems.RemoveAt(i); continue; }
             item.transform.Translate(Vector3.left * moveSpeed * dt);
-            if (item.transform.position.x < -12f) // 完全移出左边界再销毁
+            if (item.transform.position.x < -10f) // 移出左边界销毁
             {
                 UnityEngine.Object.Destroy(item);
                 _activeItems.RemoveAt(i);
@@ -191,18 +191,22 @@ public class LevelBuildBehavior : Objectbehavior
     private List<FormationDef> _formations;
 
     /// <summary>按经典编队生成一组物品。</summary>
+    // 水平位置档位：上中下
+    private readonly float[] _levelYSlots = { 3f, 0f, -3f };
+
     private void SpawnFormation()
     {
         if (_levelRoot == null) return;
         if (_formations == null || _formations.Count == 0)
             _formations = FormationLibrary.GetAllFormations();
 
-        float spawnX = 18f; // 右侧镜头外
-        float baseY = UnityEngine.Random.Range(-3f, 3f);
+        float spawnX = 10f; // 右侧屏幕外一点
+        // 随机选一个水平档位（上/中/下）
+        float baseY = _levelYSlots[UnityEngine.Random.Range(0, _levelYSlots.Length)];
 
         // 按权重随机选形状
         FormationDef formation = PickWeightedFormation();
-        Debug.Log($"[LevelBuild] 生成形状：{formation.Name}，共 {formation.Points.Count} 个物品");
+        Debug.Log($"[LevelBuild] 生成形状：{formation.Name}，baseY={baseY:F2}");
 
         foreach (var local in formation.Points)
         {
@@ -267,14 +271,9 @@ public class LevelBuildBehavior : Objectbehavior
             col.isTrigger = true;
         }
 
-        var bridge = go.GetComponent<ItemTriggerBridge>();
-        if (bridge == null) bridge = go.AddComponent<ItemTriggerBridge>();
-        if (bridge != null)
-        {
-            var fruitData = new Fruit { Type = type };
-            var itemBehavior = FactoryCenter.Instance.CreateBehaviour<ItemBehavior>(go, fruitData);
-            bridge.Bind(itemBehavior);
-        }
+        var fruitData = new Fruit { Type = type };
+        var itemBehavior = FactoryCenter.Instance.CreateBehaviour<ItemBehavior>(go, fruitData);
+        BehaviourRegistry.RegisterItem(go, itemBehavior);
 
         _activeItems.Add(go);
     }

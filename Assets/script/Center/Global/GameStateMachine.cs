@@ -30,13 +30,20 @@ public class GameStateMachine : BasicSingle<GameStateMachine>
     {
         Debug.Log("[GameStateMachine] 开始游戏");
         ResetSessionData();
+        Global.SessionStartTime = Time.time;  // 记录本局开始时间
         ChangeState(GameEnum.Playing);
         EventCenter.Instance.Broadcast("GameStart");
     }
 
     private void OnRequestGameOver()
     {
-        Debug.Log("[GameStateMachine] 返回主菜单");
+        Debug.Log("[GameStateMachine] 游戏结束，结算本局数据");
+        // 计算本局持续时间
+        Global.SessionDuration = Time.time - Global.SessionStartTime;
+        // 计算最终分数（基础分 + 时间加成）
+        Global.SessionTimeBonus = Global.SessionDuration * 10f;
+        Global.FinalSessionScore = Global.SessionBaseScore + Mathf.RoundToInt(Global.SessionTimeBonus);
+        Debug.Log($"[GameStateMachine] 本局时长={Global.SessionDuration:F1}s，基础分={Global.SessionBaseScore}，时间加成={Global.SessionTimeBonus:F0}，最终分={Global.FinalSessionScore}");
         ChangeState(GameEnum.start);
     }
 

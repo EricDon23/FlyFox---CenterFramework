@@ -42,8 +42,11 @@ public static class ConfigTableGenerator
         // 反序列化已有数据，判断是否为列表结构
         Type dataType = data.GetType();
 
-        // 如果已有 JSON 是 ListWrapper 结构（数组）
-        if (existing.TrimStart().StartsWith("["))
+        // 如果已有 JSON 是列表结构（裸数组或 ListWrapper 包装）
+        string trimmed = existing.TrimStart();
+        bool isList = trimmed.StartsWith("[") || trimmed.Contains("\"Items\"");
+
+        if (isList)
         {
             AppendToArray(data, fullPath, existing);
         }
@@ -98,10 +101,10 @@ public static class ConfigTableGenerator
         // 用 JsonUtility 包装类序列化列表
         var wrapperType = typeof(ListWrapper<>).MakeGenericType(elementType);
         var wrapper = Activator.CreateInstance(wrapperType);
-        var listProp = wrapperType.GetProperty("Items");
+        var listField = wrapperType.GetField("Items");
         var genericList = Activator.CreateInstance(typeof(List<>).MakeGenericType(elementType));
         foreach (var item in list) ((IList)genericList).Add(item);
-        listProp.SetValue(wrapper, genericList);
+        listField.SetValue(wrapper, genericList);
 
         string json = JsonUtility.ToJson(wrapper, prettyPrint: true);
         File.WriteAllText(fullPath, json);
@@ -128,7 +131,7 @@ public static class ConfigTableGenerator
             return;
         }
 
-        var list = (IList)wrapperType.GetProperty("Items").GetValue(wrapper);
+        var list = (IList)wrapperType.GetField("Items").GetValue(wrapper);
         list.Add(data);
 
         string json = JsonUtility.ToJson(wrapper, prettyPrint: true);
@@ -140,7 +143,9 @@ public static class ConfigTableGenerator
     {
         string dir = DEFAULT_DIR;
         if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
-        return Path.Combine(dir, relativePath.EndsWith(".json") ? relativePath : relativePath + ".json");
+        string fullPath = Path.Combine(dir, relativePath.EndsWith(".json") ? relativePath : relativePath + ".json");
+        Debug.Log($"[ConfigTableGenerator] 解析路径：{fullPath}");
+        return fullPath;
     }
 }
 

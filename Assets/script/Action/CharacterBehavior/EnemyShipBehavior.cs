@@ -1,63 +1,84 @@
 using UnityEngine;
 
 /// <summary>
-/// 敌机行为：从右侧生成，向左匀速飞行；到达左边界销毁；
-/// 定时向左发射敌机子弹；被击毁时广播加分事件。
+/// 敌机行为：根据 enemyType 执行差异化移动逻辑。
+/// bettle1 水平左移 / eagle1 Sin曲线 / vulture1 垂直移动 / eagle2 45°斜移
 /// </summary>
 [AutoRegisterBehaviour("EnemyShip")]
 public class EnemyShipBehavior : Objectbehavior
 {
-    private EnemyShipData _data;
-    private float _fireTimer;
+    private string _enemyType;
+    private float _moveSpeed = 5f;
+    private float _sinAmplitude = 2.5f;  // sin 振幅调大
+    private float _sinPeriod = 2f;
+    private float _sinTimer;
+    private Vector2 _moveDir = Vector2.left;
+    private GameObject _warWarning; // 绑定的警告预制体
 
     public override void Init(GameObject obj, BasicDate objectDate)
     {
         base.Init(obj, objectDate);
-        _data = objectDate as EnemyShipData ?? new EnemyShipData();
+        var data = objectDate as EnemyShipData;
+        if (data != null)
+        {
+            _moveSpeed = data.moveSpeed;
+        }
     }
+
+    /// <summary>设置敌人类型和参数（由 EnemyBuild 调用）。</summary>
+    public void SetEnemyType(string type, Vector2 dir, float speed)
+    {
+        _enemyType = type;
+        _moveDir = dir;
+        _moveSpeed = speed;
+        _sinTimer = 0f;
+    }
+
+    /// <summary>绑定警告预制体，敌人销毁时同步销毁。</summary>
+    public void BindWarning(GameObject war) => _warWarning = war;
 
     public override void LogicAwake()
     {
         EventCenter.Instance.Subscribe("UpdateEvent", OnUpdate);
-        EventCenter.Instance.Subscribe<object>("EnemyShip_Hit", OnHit);
+        Debug.Log($"[EnemyShip] LogicAwake 完成，type={_enemyType}");
     }
 
     public override void LogicDestroy()
     {
         EventCenter.Instance.Unsubscribe("UpdateEvent", OnUpdate);
-        EventCenter.Instance.Unsubscribe<object>("EnemyShip_Hit", OnHit);
+        Debug.Log($"[EnemyShip] LogicDestroy，type={_enemyType}，销毁 war 警告");
+        if (_warWarning != null) Object.Destroy(_warWarning);
     }
 
     private void OnUpdate()
     {
-        if (Global.CurrentState != GameEnum.Playing) return;
-        if (g_obj == null) return;
+        if (Global.CurrentState != GameEnum.Playing || g_obj == null) return;
 
-        g_obj.transform.Translate(Vector3.left * _data.moveSpeed * Time.deltaTime);
+        _sinTimer += Time.deltaTime;
+        Vector3 oldPos = g_obj.transform.position;
 
-        // 自动射击
-        _fireTimer += Time.deltaTime;
-        if (_fireTimer >= _data.fireInterval)
+        switch (_enemyType)
         {
-            _fireTimer = 0f;
-            Vector3 spawnPos = g_obj.transform.position + new Vector3(-0.5f, 0f, 0f);
-            EventCenter.Instance.Broadcast("FireEnemyBullet", new FireRequest(spawnPos, -1f, 6f));
+            case "bettle1":
+                g_obj.transform.Translate(Vector3.left * _moveSpeed * Time.deltaTime);
+                break;
+            case "eagle1":
+                float yOffset = Mathf.Sin(_sinTimer * Mathf.PI / _sinPeriod) * _sinAmplitude;
+                g_obj.transform.Translate(new Vector3(-_moveSpeed * Time.deltaTime, yOffset * Time.deltaTime, 0));
+                break;
+            case "vulture1":
+                g_obj.transform.Translate((Vector3)_moveDir * _moveSpeed * Time.deltaTime);
+                break;
+            case "eagle2":
+                g_obj.transform.Translate(new Vector3(-_moveSpeed, -_moveSpeed, 0) * Time.deltaTime);
+                break;
         }
 
-        // 飞出左边界
-        if (g_obj.transform.position.x < _data.leftKillX)
+        // 出视口销毁
+        if (Mathf.Abs(g_obj.transform.position.x) > 12f || g_obj.transform.position.y > 10f || g_obj.transform.position.y < -8f)
         {
-            Object.Destroy(g_obj);
-        }
-    }
-
-    private void OnHit(object damageObj)
-    {
-        int dmg = damageObj is int i ? i : 1;
-        _data.currentHealth -= dmg;
-        if (_data.currentHealth <= 0)
-        {
-            EventCenter.Instance.Broadcast<int>("EnemyKilled", _data.scoreValue);
+            Debug.Log($"[EnemyShip] {_enemyType} 出视口，位置={g_obj.transform.position}，销毁");
+            LogicDestroy();
             Object.Destroy(g_obj);
         }
     }
