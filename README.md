@@ -1,10 +1,26 @@
-# CenterFramework
+# FlyFox - CenterFramework
 
-> 
 > A Unity Custom Game Framework | 自研Unity游戏框架
-> 统一架构：**Center（框架基础，冻结） + Action（行为/逻辑） + Data（纯数据） + Enum + resource**
+> 基于 Center 框架开发的横版飞行射击游戏
 
-框架内部的全局状态（Global / GameStateMachine / ScoreCalculator）位于 `Center/global/`，引导入口 `GlobalConter` 位于 `Center/Bootstrap/`。
+---
+
+## 🎮 游戏介绍
+
+**FlyFox** 是一款横版飞行射击游戏，基于自研 Center 框架开发。
+
+### 游戏玩法
+- 玩家控制小飞机在屏幕内移动，躲避敌人碰撞
+- 收集金币、宝石、樱桃（回血）得分
+- 敌人有多种类型，从不同方向来袭
+- 被敌人碰到扣血，3 滴血用完游戏结束
+- 按 ESC 暂停游戏
+
+### 游戏状态
+```
+主菜单 → Play → 游戏中 → GameOver
+              ↘ ESC → 暂停菜单 → 继续/退出
+```
 
 ---
 
@@ -12,170 +28,110 @@
 
 ```
 Assets/script/
-├── Action/                          游戏行为 + 逻辑（按域分三层）
-│   ├── CharacterBehavior/           角色/物品：
-│   │                                  PlayerBehavior / PlayerAction
-│   │                                  ItemBehavior / ScoreAction
-│   │                                  FeedbackAnimation（普通 Mono，非行为）
+├── Action/                          游戏行为 + 逻辑
+│   ├── CharacterBehavior/           角色行为：
+│   │                                  PlayerBehavior（玩家移动+碰撞+动画）
+│   │                                  EnemyShipBehavior（4种敌人差异化移动）
+│   │                                  ItemBehavior（物品拾取）
+│   │                                  BehaviourRegistry（静态行为注册表）
 │   ├── GameBehavior/               游戏行为：
-│   │                                  LevelBuildBehavior / LevelBuild
-│   │                                  BackgroundParallaxBehavior / BackgroundParallaxLogic
-│   └── UIBehavior/                  UI 行为：
-│                                      ScoreRollingBehavior / ScoreRollingLogic
-│                                      UIManagerBehavior / UIManagerLogic
+│   │                                  LevelBuildBehavior（物品关卡构建）
+│   │                                  EnemyBuildBehavior（敌人生成器）
+│   │                                  InputController（输入控制）
+│   │                                  BackgroundParallaxBehavior（背景视差）
+│   ├── UIBehavior/                  UI 行为：
+│   │                                  UIManagerBehavior（主菜单）
+│   │                                  GamingUI（游戏内HUD：血量/Dash/分数）
+│   │                                  GameStopUi（暂停菜单）
+│   │                                  GameOverUi（结算界面）
+│   │                                  RecordBehavior（成绩记录）
+│   │                                  ScoreRollingBehavior（分数滚动）
+│   └── Archive/                    归档死代码
 ├── Center/                          框架基础（冻结：只修 bug，不新增）
-│   ├── Bootstrap/                   SingleMono / SingleUIMono / GlobalConter
-│   ├── Behavior/                    BasicObjectBehaviorImp / Objectbehavior / UIBehavior
-│   ├── Event/                       EventCenter
-│   ├── Factory/                     BehaviourTypeRegistry / BehaviourFactory / BehaviourInstanceHub / FactoryCenter
+│   ├── Bootstrap/                   SingleMono / GlobalConter
+│   ├── Behavior/                    Objectbehavior / UIBehavior
+│   ├── Event/                       EventCenter（事件中心）
+│   ├── Factory/                     BehaviourFactory / FactoryCenter
 │   ├── Config/                      ConfigCenter / BasicDate
-│   ├── Resource/                    ResCenter + ResModule/（Resources/AB/Addressable/Web/Editor）
-│   ├── CollisionModuled/            CollisionBridge2D/3D + TriggerBridge2D/3D
-│   ├── global/                      Global（静态数据）/ GameStateMachine / ScoreCalculator
-│   ├── structure/                   ResHandle / AudioPlayRequest / Tag
-│   ├── Utils/                       BasicSingle / AutoRegister*Attribute / JsonDataUtil / …
-│   ├── AssemblyScanner.cs           程序集扫描器
-│   ├── AssetPool.cs / AudioCenter.cs / InputCenter.cs / UI/UICenter.cs
-│   └── Framework.md                 框架详细文档
-├── Data/                            纯数据类（BasicDate 子类）：
-│                                      Player / Score / Fruit / GridCell
-│                                      BackgroundParallaxData / ScoreRollingData
-│                                      SpawnPositionData / UIManagerData
-├── Enum/                            GameEnum / AudioGroupType / GridType / ScoreShape / InterActionType
-└── resource/                        配置/资源源文件
+│   ├── Resource/                    ResCenter
+│   ├── CollisionModule/             TriggerBridge2D / CollisionBridge2D
+│   ├── Global/                      GameStateMachine / Global
+│   └── Tool/                        ConfigTableGenerator
+├── Data/                            纯数据类：
+│                                      Player / Score / ScoreRecord
+│                                      EnemyShipData / SpawnPositionData
+└── Enum/                            GameEnum / GridType
 ```
 
 ---
 
-## ⚙️ 核心启动时序
+## 🎯 游戏功能
 
-```
-flowchart LR
-    A[首次访问 SingleMono.Instance] --> B[创建 GameObject:SingleMono + 挂载SingleMono组件]
-    B --> C[SingleMono.Awake]
-    C --> D[EnsureGlobalConterCreated 创建GlobalConter对象]
-    D --> E[GlobalConter.Awake → Initialize()]
-    E --> E1[SingleMono / SingleUIMono 事件泵就绪]
-    E --> E2[AssemblyScanner 扫描行为、配置特性]
-    E --> E3[FactoryCenter.BootstrapInitialBehaviours<br/>启动自动实例化行为 isBuild=true]
-    E --> E4[OpenMainUI 自动加载主UI面板]
-    E --> E5[GameStateMachine 初始化，默认进入Menu状态]
-    E --> F[广播 AwakeEvent 事件]
-    F --> G[后续每帧 SingleMono.Update/FixedUpdate<br/>EventCenter广播事件，驱动所有行为回调]
-```
+### 玩家系统
+- **移动**：WASD / 方向键移动，相机边界限制
+- **Dash 冲刺**：Shift 键冲刺，3 次上限，自动恢复
+- **血量**：3 滴血，被敌人碰撞扣 1 血，1 秒无敌
+- **受伤动画**：Animator hurt 参数触发受伤动画
 
-时序文本版：
+### 敌人系统
+| 敌人 | 移动方式 | 生成位置 |
+|---|---|---|
+| 甲虫 bettle1 | 水平左移 | 右侧 |
+| 曲线鹰 eagle1 | Sin 曲线摆动 | 右侧 |
+| 秃鹫 vulture1 | 垂直上下飞 | 上方/下方 |
+| 斜鹰 eagle2 | 45° 斜向左下 | 右上方 |
 
-```
-首次访问 SingleMono.Instance
-  → new GameObject("SingleMono") + AddComponent<SingleMono>()
-    → SingleMono.Awake
-      → EnsureGlobalConterCreated() → new GameObject("GlobalConter") + AddComponent<GlobalConter>()
-        → GlobalConter.Awake → Initialize()
-            1. SingleMono / SingleUIMono 事件泵就绪
-            2. AssemblyScanner.ScanBehaviours() / ScanConfigs()   // 特性扫描
-            3. FactoryCenter.BootstrapInitialBehaviours()        // isBuild=true 的非 UI 行为
-            4. OpenMainUI()                                     // 遍历 Registry 找第一个 UIBehavior
-            5. GameStateMachine.Initialize()                     // 状态事件 + 置 Menu
-      → RegisterEvent + Broadcast("AwakeEvent")
-  → 之后每帧 SingleMono.Update/FixedUpdate → EventCenter 广播 → 行为回调
-```
+### 难度递增
+- 移动速度随时间加快（5f → 10f 上限）
+- 生成间隔随时间缩短（3s → 1s 下限）
+- 屏幕内敌人上限 6 个
+
+### UI 系统
+- **主菜单**：Play / Record 按钮
+- **游戏 HUD**：血量图标、Dash 图标、实时分数
+- **暂停菜单**：ESC 呼出，继续/退出
+- **结算界面**：显示本局分数、存活时间，保存到 scores.json
+- **成绩记录**：按分数排序显示历史成绩
 
 ---
 
-## 🧩 三层分离架构
+## 📦 打包信息
 
-| 分层 | 存放路径 | 核心职责 |
-| --- | --- | --- |
-| 数据 Data | `Data/` | `BasicDate` 子类，字段 + 只读属性 + 修改方法（`Heal`/`ApplyDamage`/`Set*`），**无业务逻辑** |
-| 逻辑 Logic | `Action/` 对应目录 | 纯C#普通类（PlayerAction、LevelBuild等），由Behavior持有，承载业务逻辑 |
-| 行为 Behavior | `Action/` 对应目录 | `Objectbehavior` 子类，只负责：绑定数据 → 创建逻辑实例 → 订阅事件 → 销毁退订 |
-
----
-
-## ⚠️ 当前工程状态（必读）
-
-框架管线（特性扫描 → 注册 → 工厂实例化）代码已就位，但**业务侧尚未迁移到新管线**：
-
-1. 现有 6 个行为类均未打 `[AutoRegisterBehaviour]`，8 个数据类均未打 `[AutoRegisterConfig]`。
-→ 扫描器扫到空表，启动时 `BootstrapInitialBehaviours` 空转，`isBuild=true` 构造器标记当前不生效。
-2. `UIManagerBehavior`/`ScoreRollingBehavior` 继承的是 `Objectbehavior` 而非 `UIBehavior`，不走 UI 泵自动订阅，也不被 `OpenMainUI` 识别。
-3. `InputCenter` 无 `SetKeyMap`/`SetAxisMap` 调用，`PlayerBehavior.GetMoveVector()` 运行时返回零向量。
-4. `ConfigCenter.LoadConfig` 无调用方，`Resources/Config/` 下已有 4 个 json 但当前不被加载。
-
-> 
-> 详细断点与修复优先级见 `Center/Framework.md` 第 7 节。
-> **新增内容**请严格按下方「配置指南」写正确代码；**存量旧内容**待 owner 授权后统一迁移。
-
----
-
-## 📦 资源现状 Assets/Resources/
-
-| 类型 | 已有资源 | 缺失资源 |
-| --- | --- | --- |
-| 预制体 | `Player.prefab`、`Background.prefab`、`LevelBuild.prefab` | `Item.prefab`、`ScoreRolling.prefab`、UI 主面板预制体 |
-| 配置 JSON | `player.json`、`background.json`、`levelbuild.json`、`scorerolling.json` | 无（接线后即可生效） |
-
----
-
-## 📝 配置指南：新增一个行为的标准流程
-
-### 1. 编写数据类（Data/）
-
-继承 `BasicDate`，添加 `[AutoRegisterConfig("Key")]`
-
+### BUILD 文件夹
 ```
-[AutoRegisterConfig("Player")]
-[Serializable]
-public class Player : BasicDate
-{
-    [SerializeField] private int currentHealth = 1;
-    public int Health => currentHealth;
-    public void ApplyDamage(int amount) => currentHealth = Mathf.Max(currentHealth - amount, 0);
-}
+BUILD/
+└── Windows/
+    └── FlyFox.exe  可执行文件
 ```
 
-### 2. 编写行为类（Action/对应目录）
-
-实体行为继承 `Objectbehavior`；UI行为继承 `UIBehavior`，打上 `[AutoRegisterBehaviour("Key")]`
-
-```
-[AutoRegisterBehaviour("Player")]
-public class PlayerBehavior : Objectbehavior
-{
-    public PlayerBehavior() { isBuild = true; }   // 启动时自动实例化
-    // isGlobal = true 时：不加载预制体、不绑数据，直读 Global 静态类
-    public override void Init(GameObject obj, BasicDate objectDate) { /* … */ }
-    public override void LogicAwake()  { /* Subscribe */ }
-    public override void LogicDestroy(){ /* Unsubscribe */ }
-}
-```
-
-### 3. 配置文件（可选）
-
-`Assets/Resources/Config/player.json`，字段名与序列化字段保持一致。
-配置缺失时自动回退到数据类内定义的默认值（config-first）。
-
-### 4. 预制体（实体行为必需）
-
-`Assets/Resources/<Key>.prefab`，文件名与 `[AutoRegisterBehaviour("Key")]` 的 key 保持一致。
-
-> 
-> 全局行为（`isGlobal=true`）不需要预制体。
-
-### 5. 碰撞/触发桥模块
-
-`TriggerBridge2D/3D` / `CollisionBridge2D/3D` 直接挂载在场景/预制体物体上，调用 `BindEnterEvent` 注册回调。
-
-> 
-> 桥组件是普通MonoBehaviour，**不走工厂、不需要特性标记**。
+### 运行要求
+- Windows 系统
+- 无需安装，解压即可运行
 
 ---
 
 ## 🚀 快速上手
 
-- 新增行为完整步骤、代码模板、`isBuild/isGlobal` 语义、UI行为写法、单元测试：[开发教程.md](./%E5%BC%80%E5%8F%91%E6%95%99%E7%A8%8B.md)
-- 框架架构、模块职责、启动时序、合规审查：[Center/Framework.md](./Center/Framework.md)
+### 开发环境
+- Unity 2022.3 LTS
+- C#
+
+### 运行游戏
+1. 打开 Unity Hub，加载项目
+2. 等待资源导入完成
+3. 点击 Play 运行
+
+### 操作说明
+| 按键 | 功能 |
+|---|---|
+| WASD / 方向键 | 移动 |
+| Shift | Dash 冲刺 |
+| ESC | 暂停 / 返回 |
+| 鼠标点击 | UI 按钮 |
 
 ---
 
+## 📝 框架文档
+
+- [开发教程.md](./开发教程.md)
+- [Center/Framework.md](./Center/Framework.md)
